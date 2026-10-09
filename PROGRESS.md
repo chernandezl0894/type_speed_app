@@ -20,16 +20,16 @@ Checklist of delivered work per phase. Updated at the end of every phase.
 
 ## Phase 2 — Core (TDD)
 
-- [ ] `core/stats.py`: `calculate_wpm` (red → green)
-- [ ] `core/stats.py`: `calculate_accuracy` (red → green)
-- [ ] `core/stats.py`: `format_time` (red → green)
-- [ ] `core/session.py`: `TypingSession` init/target splitting (red → green)
-- [ ] `core/session.py`: `handle_char` + timer start on first accepted char
-- [ ] `core/session.py`: `handle_backspace` (in-word, empty no-op)
-- [ ] `core/session.py`: `handle_space` (close word, empty no-op, completion)
-- [ ] `core/session.py`: post-completion no-ops; `elapsed_seconds` freeze
-- [ ] `core/session.py`: `typed_words`, `typed_char_count`, `char_statuses`
-- [ ] All tests green; core coverage 100%
+- [x] `core/stats.py`: `calculate_wpm` (red → green)
+- [x] `core/stats.py`: `calculate_accuracy` (red → green)
+- [x] `core/stats.py`: `format_time` (red → green)
+- [x] `core/session.py`: `TypingSession` init/target splitting (red → green)
+- [x] `core/session.py`: `handle_char` + timer start on first accepted char
+- [x] `core/session.py`: `handle_backspace` (in-word, empty no-op)
+- [x] `core/session.py`: `handle_space` (close word, empty no-op, completion)
+- [x] `core/session.py`: post-completion no-ops; `elapsed_seconds` freeze
+- [x] `core/session.py`: `typed_words`, `typed_char_count`, `char_statuses`
+- [x] All tests green; core coverage 100%
 
 ## Phase 3 — Services (TDD)
 
