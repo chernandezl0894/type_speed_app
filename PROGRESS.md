@@ -12,11 +12,11 @@ Checklist of delivered work per phase. Updated at the end of every phase.
 
 ## Phase 1 — Environment + tooling
 
-- [ ] Complete `pyproject.toml`: dev deps (pytest, pytest-cov, ruff, basedpyright)
-- [ ] Configure ruff (lint E,F,I,UP,B + format, line length 88)
-- [ ] Configure pytest (`testpaths`, coverage addopts) and coverage
-- [ ] Configure basedpyright in `pyproject.toml`
-- [ ] `uv sync` and verify: `uv run ruff check . && uv run pytest` clean
+- [x] Complete `pyproject.toml`: dev deps (pytest, pytest-cov, ruff, basedpyright)
+- [x] Configure ruff (lint E,F,I,UP,B + format, line length 88)
+- [x] Configure pytest (`testpaths`, coverage addopts) and coverage
+- [x] Configure basedpyright in `pyproject.toml` (strict)
+- [x] `uv sync` and verify: `uv run ruff check . && uv run pytest` clean
 
 ## Phase 2 — Core (TDD)
 
