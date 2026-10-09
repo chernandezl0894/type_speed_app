@@ -33,12 +33,12 @@ Checklist of delivered work per phase. Updated at the end of every phase.
 
 ## Phase 3 — Services (TDD)
 
-- [ ] `services/paragraphs.py`: normalization helper
-- [ ] `services/paragraphs.py`: `fetch_paragraph` success (mocked HTTP)
-- [ ] `services/paragraphs.py`: fallback on timeout/HTTP error/empty payload
-- [ ] `services/records.py`: `load_best` (missing/corrupt/OSError → None)
-- [ ] `services/records.py`: `save_if_better` (new/improve/no-improve/mkdir/OSError)
-- [ ] All tests green; services coverage 100%
+- [x] `services/paragraphs.py`: normalization helper
+- [x] `services/paragraphs.py`: `fetch_paragraph` success (mocked HTTP)
+- [x] `services/paragraphs.py`: fallback on timeout/HTTP error/empty payload
+- [x] `services/records.py`: `load_best` (missing/corrupt/OSError → None)
+- [x] `services/records.py`: `save_if_better` (new/improve/no-improve/mkdir/OSError)
+- [x] All tests green; services coverage 100%
 
 ## Phase 4 — UI (Tkinter)
 
