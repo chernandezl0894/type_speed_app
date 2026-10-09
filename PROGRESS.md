@@ -1,0 +1,60 @@
+# Progress
+
+Checklist of delivered work per phase. Updated at the end of every phase.
+
+## Phase 0 — Repo + Spec
+
+- [x] Initialize git repository and base commit (editor/tooling configs)
+- [x] Write design spec (`docs/superpowers/specs/2026-10-09-type-speed-design.md`)
+- [x] Spec review loop with subagent (5 iterations, approved)
+- [x] Create this PROGRESS checklist
+- [ ] User reviews the spec (gate)
+
+## Phase 1 — Environment + tooling
+
+- [ ] Complete `pyproject.toml`: dev deps (pytest, pytest-cov, ruff, basedpyright)
+- [ ] Configure ruff (lint E,F,I,UP,B + format, line length 88)
+- [ ] Configure pytest (`testpaths`, coverage addopts) and coverage
+- [ ] Configure basedpyright in `pyproject.toml`
+- [ ] `uv sync` and verify: `uv run ruff check . && uv run pytest` clean
+
+## Phase 2 — Core (TDD)
+
+- [ ] `core/stats.py`: `calculate_wpm` (red → green)
+- [ ] `core/stats.py`: `calculate_accuracy` (red → green)
+- [ ] `core/stats.py`: `format_time` (red → green)
+- [ ] `core/session.py`: `TypingSession` init/target splitting (red → green)
+- [ ] `core/session.py`: `handle_char` + timer start on first accepted char
+- [ ] `core/session.py`: `handle_backspace` (in-word, empty no-op)
+- [ ] `core/session.py`: `handle_space` (close word, empty no-op, completion)
+- [ ] `core/session.py`: post-completion no-ops; `elapsed_seconds` freeze
+- [ ] `core/session.py`: `typed_words`, `typed_char_count`, `char_statuses`
+- [ ] All tests green; core coverage 100%
+
+## Phase 3 — Services (TDD)
+
+- [ ] `services/paragraphs.py`: normalization helper
+- [ ] `services/paragraphs.py`: `fetch_paragraph` success (mocked HTTP)
+- [ ] `services/paragraphs.py`: fallback on timeout/HTTP error/empty payload
+- [ ] `services/records.py`: `load_best` (missing/corrupt/OSError → None)
+- [ ] `services/records.py`: `save_if_better` (new/improve/no-improve/mkdir/OSError)
+- [ ] All tests green; services coverage 100%
+
+## Phase 4 — UI (Tkinter)
+
+- [ ] `ui/widgets.py`: `ParagraphView.render` with tags (ok/bad/current/pending)
+- [ ] `ui/app.py`: layout (header with timer/WPM/best/Restart, paragraph + scrollbar, Entry)
+- [ ] `ui/app.py`: key bindings (printable, Backspace, Space/Enter, Tab consumed)
+- [ ] `ui/app.py`: timer loop (`after(100)`), live WPM
+- [ ] `ui/app.py`: results dialog (WPM, accuracy, time, new-best, Restart)
+- [ ] `ui/app.py`: offline indicator when fallback text is used
+- [ ] `__main__.py` entry point
+- [ ] `tests/test_ui_smoke.py` (skip without DISPLAY)
+- [ ] Manual verification: `uv run python -m type_speed`
+
+## Phase 5 — Docs & polish
+
+- [ ] Professional `README.md` (description, install, usage, development, structure, license)
+- [ ] `LICENSE` (Unlicense)
+- [ ] Final `PROGRESS.md` update
+- [ ] Final gate: `uv run ruff check --fix . && uv run ruff format . && uv run pytest`
