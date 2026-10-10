@@ -2,13 +2,15 @@
 
 Checklist of delivered work per phase. Updated at the end of every phase.
 
+**Status: COMPLETE** — all phases delivered.
+
 ## Phase 0 — Repo + Spec
 
 - [x] Initialize git repository and base commit (editor/tooling configs)
 - [x] Write design spec (`docs/superpowers/specs/2026-10-09-type-speed-design.md`)
 - [x] Spec review loop with subagent (5 iterations, approved)
 - [x] Create this PROGRESS checklist
-- [ ] User reviews the spec (gate)
+- [x] User reviews the spec (gate)
 
 ## Phase 1 — Environment + tooling
 
@@ -55,6 +57,6 @@ Checklist of delivered work per phase. Updated at the end of every phase.
 ## Phase 5 — Docs & polish
 
 - [x] Professional `README.md` (description, install, usage, development, structure, license)
-- [ ] `LICENSE` (Unlicense)
-- [ ] Final `PROGRESS.md` update
-- [ ] Final gate: `uv run ruff check --fix . && uv run ruff format . && uv run pytest`
+- [x] `LICENSE` (Unlicense)
+- [x] Final `PROGRESS.md` update
+- [x] Final gate: `uv run ruff check --fix . && uv run ruff format . && uv run pytest`
