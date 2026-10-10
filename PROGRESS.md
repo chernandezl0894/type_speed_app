@@ -42,19 +42,19 @@ Checklist of delivered work per phase. Updated at the end of every phase.
 
 ## Phase 4 — UI (Tkinter)
 
-- [ ] `ui/widgets.py`: `ParagraphView.render` with tags (ok/bad/current/pending)
-- [ ] `ui/app.py`: layout (header with timer/WPM/best/Restart, paragraph + scrollbar, Entry)
-- [ ] `ui/app.py`: key bindings (printable, Backspace, Space/Enter, Tab consumed)
-- [ ] `ui/app.py`: timer loop (`after(100)`), live WPM
-- [ ] `ui/app.py`: results dialog (WPM, accuracy, time, new-best, Restart)
-- [ ] `ui/app.py`: offline indicator when fallback text is used
-- [ ] `__main__.py` entry point
-- [ ] `tests/test_ui_smoke.py` (skip without DISPLAY)
-- [ ] Manual verification: `uv run python -m type_speed`
+- [x] `ui/widgets.py`: `ParagraphView.render` with tags (ok/bad/current/pending)
+- [x] `ui/app.py`: layout (header with timer/WPM/best/Restart, paragraph + scrollbar, Entry)
+- [x] `ui/app.py`: key bindings (printable, Backspace, Space/Enter, Tab consumed)
+- [x] `ui/app.py`: timer loop (`after(100)`), live WPM
+- [x] `ui/app.py`: results dialog (WPM, accuracy, time, new-best, Restart)
+- [x] `ui/app.py`: offline indicator when fallback text is used
+- [x] `__main__.py` entry point
+- [x] `tests/test_ui_smoke.py` (window construct, offline indicator, typing flow)
+- [x] Manual verification: real API fetch + end-to-end typing simulation
 
 ## Phase 5 — Docs & polish
 
-- [ ] Professional `README.md` (description, install, usage, development, structure, license)
+- [x] Professional `README.md` (description, install, usage, development, structure, license)
 - [ ] `LICENSE` (Unlicense)
 - [ ] Final `PROGRESS.md` update
 - [ ] Final gate: `uv run ruff check --fix . && uv run ruff format . && uv run pytest`
